@@ -48,19 +48,24 @@ const Image = styled.img`
 `;
 
 const Tags = styled.ul`
-  display: inline;
-  flex-wrap: wrap;
+  text-overflow: ellipsis;
+
+  overflow: hidden;
+  padding: 8px 0;
+  white-space: nowrap;
+
   gap: 8px;
 `;
 
 const Tag = styled.li`
   padding: 4px 8px;
+  display: inline;
   background: var(--color-gray-300);
   font-size: 0.875rem;
   font-weight: 475;
-  width: 200px;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  &:not(:last-of-type) {
+    margin-right: 8px;
+  }
 
   color: var(--color-gray-800);
 `;
